@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,12 +17,310 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bola" translatesAutoresizingMaskIntoConstraints="NO" id="3Ih-GE-Abc">
+                                <rect key="frame" x="88" y="426" width="37" height="28"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="1s6-Zy-0HP"/>
+                                    <constraint firstAttribute="height" constant="28" id="luH-lY-SoN"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="ccD-ub-u0V">
+                                <rect key="frame" x="26" y="353" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="Hme-Lw-zUp"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hme-Lw-zUp"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="jTt-kz-F1e">
+                                <rect key="frame" x="26" y="290" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="WiR-zR-Dwg"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WiR-zR-Dwg"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="d7i-fL-2Ma">
+                                <rect key="frame" x="26" y="222" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="eZh-w6-gSj"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eZh-w6-gSj"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="twitter" translatesAutoresizingMaskIntoConstraints="NO" id="3kf-i4-H1x">
+                                <rect key="frame" x="32" y="131" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="qAJ-O2-Cx0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qAJ-O2-Cx0"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gameOver" translatesAutoresizingMaskIntoConstraints="NO" id="prn-0B-7Jc">
+                                <rect key="frame" x="76" y="45" width="60" height="60"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="coluna" translatesAutoresizingMaskIntoConstraints="NO" id="g8t-Dn-AO6">
+                                <rect key="frame" x="257" y="301" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="T5T-AM-MiQ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="T5T-AM-MiQ"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="coluna" translatesAutoresizingMaskIntoConstraints="NO" id="Pzy-Nm-55o">
+                                <rect key="frame" x="215" y="238" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="wxc-xd-bhf"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="wxc-xd-bhf"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="coluna" translatesAutoresizingMaskIntoConstraints="NO" id="eaX-rt-Woj">
+                                <rect key="frame" x="174" y="301" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="kyj-DE-LdM"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="kyj-DE-LdM"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="coluna" translatesAutoresizingMaskIntoConstraints="NO" id="rjE-L2-xZW">
+                                <rect key="frame" x="215" y="301" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="cbg-Rc-esk"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="cbg-Rc-esk"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="coluna" translatesAutoresizingMaskIntoConstraints="NO" id="6Ry-I1-6bg">
+                                <rect key="frame" x="298" y="301" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="jIg-Af-TWX"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jIg-Af-TWX"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="coluna" translatesAutoresizingMaskIntoConstraints="NO" id="ije-qD-r9j">
+                                <rect key="frame" x="340" y="301" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="WDl-8n-biK"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WDl-8n-biK"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="coluna" translatesAutoresizingMaskIntoConstraints="NO" id="9JO-0x-QBz">
+                                <rect key="frame" x="257" y="238" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="gf3-78-65m"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="gf3-78-65m"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="coluna" translatesAutoresizingMaskIntoConstraints="NO" id="F64-0J-kvZ">
+                                <rect key="frame" x="298" y="238" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="IE1-lY-8uj"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="IE1-lY-8uj"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="coluna" translatesAutoresizingMaskIntoConstraints="NO" id="T9y-pw-DG0">
+                                <rect key="frame" x="174" y="238" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="8Wk-We-b4x"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8Wk-We-b4x"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="Jn0-tF-KR4">
+                                <rect key="frame" x="181" y="0.0" width="348" height="186"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="348" id="dQd-b8-lzE"/>
+                                    <constraint firstAttribute="height" constant="186" id="qji-O2-rGN"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="retry" translatesAutoresizingMaskIntoConstraints="NO" id="FJr-zt-5ID">
+                                <rect key="frame" x="410" y="455" width="170" height="120"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="XZN-gB-DMv"/>
+                                    <constraint firstAttribute="height" constant="120" id="zQI-hp-718"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-DC-GMs">
+                                <rect key="frame" x="347" y="398" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="RetryB"/>
+                                <connections>
+                                    <action selector="retry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nIw-Vt-Whe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRX-dT-1Nz">
+                                <rect key="frame" x="142" y="262" width="226" height="47"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Clique para Jogar">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="THR-MQ-zJk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="coluna" translatesAutoresizingMaskIntoConstraints="NO" id="LFo-kC-PcF">
+                                <rect key="frame" x="340" y="238" width="60" height="60"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="D1s-Tc-dhC"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="D1s-Tc-dhC"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ccD-ub-u0V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="05h-Xy-LfU"/>
+                            <constraint firstItem="Jn0-tF-KR4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="55" id="0Th-bY-LTg"/>
+                            <constraint firstItem="FJr-zt-5ID" firstAttribute="trailing" secondItem="6Ry-I1-6bg" secondAttribute="trailing" id="18e-mc-oa4"/>
+                            <constraint firstItem="3Ih-GE-Abc" firstAttribute="top" secondItem="ccD-ub-u0V" secondAttribute="bottom" constant="8" symbolic="YES" id="1Uy-T4-b45"/>
+                            <constraint firstItem="FJr-zt-5ID" firstAttribute="leading" secondItem="Jn0-tF-KR4" secondAttribute="trailing" constant="26" id="3bJ-gf-Oki"/>
+                            <constraint firstItem="6Ry-I1-6bg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="8" id="48E-c1-PRk"/>
+                            <constraint firstItem="GRX-dT-1Nz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="128" id="9nG-Se-C20"/>
+                            <constraint firstItem="GRX-dT-1Nz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-14.5" id="GbF-gp-JN3"/>
+                            <constraint firstItem="FJr-zt-5ID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="195" id="PHc-Px-QFL"/>
+                            <constraint firstItem="3kf-i4-H1x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-21" id="Ubo-65-akW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5JU-DC-GMs" secondAttribute="bottom" constant="74" id="X9a-cL-BEa"/>
+                            <constraint firstItem="3kf-i4-H1x" firstAttribute="top" secondItem="Jn0-tF-KR4" secondAttribute="bottom" constant="8" symbolic="YES" id="cq8-LX-Xd8"/>
+                            <constraint firstItem="Jn0-tF-KR4" firstAttribute="centerX" secondItem="ccD-ub-u0V" secondAttribute="centerX" id="dCx-O0-lNI"/>
+                            <constraint firstItem="6Ry-I1-6bg" firstAttribute="leading" secondItem="3Ih-GE-Abc" secondAttribute="trailing" constant="20" id="dKF-Sc-7iv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5JU-DC-GMs" secondAttribute="trailing" constant="47" id="djm-9b-XZn"/>
+                            <constraint firstItem="FJr-zt-5ID" firstAttribute="top" secondItem="6Ry-I1-6bg" secondAttribute="bottom" constant="83" id="i15-NL-zvI"/>
+                            <constraint firstItem="Jn0-tF-KR4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="211" id="piw-cD-PCI"/>
+                            <constraint firstItem="6Ry-I1-6bg" firstAttribute="leading" secondItem="ccD-ub-u0V" secondAttribute="trailing" constant="45" id="qpy-ND-wC5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GRX-dT-1Nz" secondAttribute="bottom" constant="109" id="s8P-LH-6zh"/>
+                            <constraint firstItem="3Ih-GE-Abc" firstAttribute="trailing" secondItem="3kf-i4-H1x" secondAttribute="trailing" id="t4y-yG-2Dk"/>
+                            <constraint firstItem="ccD-ub-u0V" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="13" id="t8I-de-xl3"/>
+                            <constraint firstItem="Jn0-tF-KR4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="13" id="uRB-ha-tG0"/>
+                            <constraint firstItem="GRX-dT-1Nz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-45" id="yqb-Yd-RB0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Ubo-65-akW"/>
+                                <exclude reference="cq8-LX-Xd8"/>
+                                <exclude reference="dCx-O0-lNI"/>
+                                <exclude reference="piw-cD-PCI"/>
+                                <exclude reference="uRB-ha-tG0"/>
+                                <exclude reference="9nG-Se-C20"/>
+                                <exclude reference="05h-Xy-LfU"/>
+                                <exclude reference="t8I-de-xl3"/>
+                                <exclude reference="1Uy-T4-b45"/>
+                                <exclude reference="t4y-yG-2Dk"/>
+                                <exclude reference="48E-c1-PRk"/>
+                                <exclude reference="dKF-Sc-7iv"/>
+                                <exclude reference="qpy-ND-wC5"/>
+                                <exclude reference="djm-9b-XZn"/>
+                                <exclude reference="X9a-cL-BEa"/>
+                                <exclude reference="s8P-LH-6zh"/>
+                                <exclude reference="18e-mc-oa4"/>
+                                <exclude reference="3bJ-gf-Oki"/>
+                                <exclude reference="i15-NL-zvI"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="bola" destination="3Ih-GE-Abc" id="eVe-Lu-xXg"/>
+                        <outlet property="caminho" destination="ccD-ub-u0V" id="PBH-qL-eKL"/>
+                        <outlet property="caminho2" destination="jTt-kz-F1e" id="cZb-8e-p4M"/>
+                        <outlet property="caminho3" destination="d7i-fL-2Ma" id="30s-g4-kX5"/>
+                        <outlet property="coluna1" destination="T9y-pw-DG0" id="eKy-ou-chh"/>
+                        <outlet property="coluna10" destination="g8t-Dn-AO6" id="YAV-d3-6mt"/>
+                        <outlet property="coluna2" destination="F64-0J-kvZ" id="S3Z-na-dCw"/>
+                        <outlet property="coluna3" destination="9JO-0x-QBz" id="Rpe-io-AcN"/>
+                        <outlet property="coluna4" destination="ije-qD-r9j" id="piN-7k-epd"/>
+                        <outlet property="coluna5" destination="6Ry-I1-6bg" id="13a-dV-CjV"/>
+                        <outlet property="coluna6" destination="rjE-L2-xZW" id="PQM-Qe-JKW"/>
+                        <outlet property="coluna7" destination="eaX-rt-Woj" id="lFU-u5-8hV"/>
+                        <outlet property="coluna8" destination="Pzy-Nm-55o" id="hMj-Yv-NCh"/>
+                        <outlet property="coluna9" destination="LFo-kC-PcF" id="nJL-Uv-PZb"/>
+                        <outlet property="gameOver" destination="prn-0B-7Jc" id="n3k-ET-m2G"/>
+                        <outlet property="playBt" destination="GRX-dT-1Nz" id="oTD-me-HOh"/>
+                        <outlet property="retr" destination="FJr-zt-5ID" id="OBp-f6-xkR"/>
+                        <outlet property="retry" destination="5JU-DC-GMs" id="njE-Eq-99f"/>
+                        <outlet property="score" destination="Jn0-tF-KR4" id="bCG-yH-J4F"/>
+                        <outlet property="scoreBoard" destination="Jn0-tF-KR4" id="26P-b7-w7e"/>
+                        <outlet property="twitter" destination="3kf-i4-H1x" id="zt2-a4-zJg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="490" y="207"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bola" width="60" height="60"/>
+        <image name="caminho" width="60" height="60"/>
+        <image name="coluna" width="60" height="60"/>
+        <image name="gameOver" width="60" height="60"/>
+        <image name="retry" width="60" height="60"/>
+        <image name="score" width="60" height="60"/>
+        <image name="twitter" width="60" height="60"/>
+    </resources>
 </document>
