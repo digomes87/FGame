@@ -60,10 +60,10 @@
                                     <constraint firstAttribute="width" constant="286" id="hyc-vE-XGP"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-DC-GMs">
-                                <rect key="frame" x="121" y="106" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5JU-DC-GMs">
+                                <rect key="frame" x="131" y="257" width="357" height="126"/>
                                 <animations/>
-                                <state key="normal" title="RetryB"/>
+                                <state key="normal" image="retry"/>
                                 <connections>
                                     <action selector="retry:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RIX-LH-I8e"/>
                                 </connections>
@@ -383,16 +383,6 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="retry" translatesAutoresizingMaskIntoConstraints="NO" id="FJr-zt-5ID">
-                                <rect key="frame" x="30" y="121" width="170" height="120"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="186" id="3xJ-aj-5Yj"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="302" id="Vio-f8-53b"/>
-                                    <constraint firstAttribute="width" constant="170" id="XZN-gB-DMv"/>
-                                    <constraint firstAttribute="height" constant="120" id="zQI-hp-718"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kws-oB-CJl">
                                 <rect key="frame" x="528" y="28" width="64" height="35"/>
                                 <animations/>
@@ -422,13 +412,12 @@
                             <constraint firstItem="3Ih-GE-Abc" firstAttribute="top" secondItem="ccD-ub-u0V" secondAttribute="bottom" constant="8" symbolic="YES" id="1Uy-T4-b45"/>
                             <constraint firstItem="GRX-dT-1Nz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-13" id="2ch-kA-vtL"/>
                             <constraint firstItem="Y4R-SC-h1o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2sa-NV-fPV"/>
-                            <constraint firstItem="FJr-zt-5ID" firstAttribute="leading" secondItem="Jn0-tF-KR4" secondAttribute="trailing" constant="26" id="3bJ-gf-Oki"/>
                             <constraint firstItem="GRX-dT-1Nz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-82.5" id="7EC-SW-hVe"/>
                             <constraint firstItem="prn-0B-7Jc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="83p-KA-tsB"/>
                             <constraint firstItem="GRX-dT-1Nz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="128" id="9nG-Se-C20"/>
+                            <constraint firstItem="5JU-DC-GMs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="MWj-zl-tuf"/>
                             <constraint firstItem="Ot9-GA-ITA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Nnp-84-eA8"/>
                             <constraint firstItem="3kf-i4-H1x" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-21" id="Ubo-65-akW"/>
-                            <constraint firstItem="FJr-zt-5ID" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VGX-Hf-Wit"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5JU-DC-GMs" secondAttribute="bottom" constant="74" id="X9a-cL-BEa"/>
                             <constraint firstItem="3kf-i4-H1x" firstAttribute="top" secondItem="Jn0-tF-KR4" secondAttribute="bottom" constant="8" symbolic="YES" id="cq8-LX-Xd8"/>
                             <constraint firstItem="Jn0-tF-KR4" firstAttribute="centerX" secondItem="ccD-ub-u0V" secondAttribute="centerX" id="dCx-O0-lNI"/>
@@ -436,6 +425,7 @@
                             <constraint firstItem="3Ih-GE-Abc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k4g-pM-Kgh"/>
                             <constraint firstItem="3kf-i4-H1x" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mXH-rX-hA8"/>
                             <constraint firstItem="3Ih-GE-Abc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oke-gY-dMg"/>
+                            <constraint firstItem="5JU-DC-GMs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p6l-LY-TnG"/>
                             <constraint firstItem="Jn0-tF-KR4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="211" id="piw-cD-PCI"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GRX-dT-1Nz" secondAttribute="bottom" constant="109" id="s8P-LH-6zh"/>
                             <constraint firstItem="3Ih-GE-Abc" firstAttribute="trailing" secondItem="3kf-i4-H1x" secondAttribute="trailing" id="t4y-yG-2Dk"/>
@@ -451,14 +441,13 @@
                                 <exclude reference="dCx-O0-lNI"/>
                                 <exclude reference="piw-cD-PCI"/>
                                 <exclude reference="uRB-ha-tG0"/>
-                                <exclude reference="3bJ-gf-Oki"/>
                                 <exclude reference="1Uy-T4-b45"/>
                                 <exclude reference="oke-gY-dMg"/>
                                 <exclude reference="t4y-yG-2Dk"/>
-                                <exclude reference="djm-9b-XZn"/>
                                 <exclude reference="Ubo-65-akW"/>
                                 <exclude reference="cq8-LX-Xd8"/>
                                 <exclude reference="9nG-Se-C20"/>
+                                <exclude reference="djm-9b-XZn"/>
                                 <exclude reference="X9a-cL-BEa"/>
                                 <exclude reference="s8P-LH-6zh"/>
                             </mask>
@@ -503,7 +492,7 @@
                         <outlet property="pilarTop5" destination="XCi-k1-DfG" id="dnC-Iy-bgS"/>
                         <outlet property="pilarTop6" destination="1y7-JS-aiM" id="v3z-27-B6Q"/>
                         <outlet property="play" destination="GRX-dT-1Nz" id="dOl-yv-ReP"/>
-                        <outlet property="retry" destination="FJr-zt-5ID" id="LqJ-gR-PxN"/>
+                        <outlet property="retry" destination="5JU-DC-GMs" id="Ywo-NX-iIT"/>
                         <outlet property="score" destination="Ot9-GA-ITA" id="Hxr-pQ-8J0"/>
                         <outlet property="scoreBoarding" destination="3Ih-GE-Abc" id="nGq-pI-0YQ"/>
                         <outlet property="scoreNow" destination="Kws-oB-CJl" id="MYI-4b-AAJ"/>

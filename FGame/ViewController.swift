@@ -17,9 +17,10 @@ class ViewController: UIViewController {
         self.bola.hidden = false
         self.gameOver.hidden = true
         self.logo.hidden = true
-        self.retry.hidden = true
         self.scoreBoarding.hidden = true
         self.play.hidden = true
+        self.retry.hidden = true
+        
         
         
         self.bola.center.x = 178.0
@@ -27,6 +28,8 @@ class ViewController: UIViewController {
         
         self.pilar1.center = CGPointMake(175.0, 436.0)
         self.pilar2.center = CGPointMake(214.0, 407.0)
+        self.pilarTop2.center = CGPointMake(pilar1.center.x, pilar1.center.y - 35)
+        self.pilarTop3.center = CGPointMake(pilar2.center.x, pilar2.center.y - 35)
         
         time = NSTimer.scheduledTimerWithTimeInterval(0.045, target: self, selector: "move", userInfo: nil, repeats: true)
         
@@ -93,6 +96,9 @@ class ViewController: UIViewController {
         
     }
     @IBAction func retry(sender: AnyObject){
+        
+        self.viewDidLoad()
+        self.play(play)
         
     }
     
@@ -185,11 +191,10 @@ class ViewController: UIViewController {
         self.bola.hidden = true
         self.gameOver.hidden = true
         self.logo.hidden = false
-        self.retry.hidden = true
         self.scoreBoarding.hidden = true
-        self.pilarTop6.hidden = true
-        self.pilarTop5.hidden = true
-        self.pilarTop4.hidden = true
+        self.pilarTop6.hidden = false
+        self.pilarTop5.hidden = false
+        self.pilarTop4.hidden = false
         self.pilarTop3.hidden = true
         self.pilarTop2.hidden = true
         self.pilarTop1.hidden = true
@@ -267,6 +272,13 @@ class ViewController: UIViewController {
         pilar25Center = self.pilar25.center
         pilar26Center = self.pilar26.center
         
+        pilarTop1Center = self.pilarTop1.center
+        pilarTop2Center = self.pilarTop2.center
+        pilarTop3Center = self.pilarTop3.center
+        pilarTop4Center = self.pilarTop4.center
+        pilarTop5Center = self.pilarTop5.center
+        pilarTop5Center = self.pilarTop6.center
+        
         
         if BolaC == false {
             
@@ -340,6 +352,22 @@ class ViewController: UIViewController {
         pilar24.center = movePilarUp(pilar24.center.x, floaty: pilar24.center.y, pilarNumber: 24)
         pilar25.center = movePilarUp(pilar25.center.x, floaty: pilar25.center.y, pilarNumber: 25)
         pilar26.center = movePilarUp(pilar26.center.x, floaty: pilar26.center.y, pilarNumber: 26)
+        
+        
+        if (((
+            (bola.center.x > pilarTop1.center.x - 50) && (bola.center.x < pilarTop1.center.x  + 50) && (bola.center.y > pilarTop1.center.y - 45) && (bola.center.y < pilarTop1.center.y + 45) ||
+            (bola.center.x > pilarTop2.center.x - 50) && (bola.center.x < pilarTop2.center.x  + 50) && (bola.center.y > pilarTop2.center.y - 45) && (bola.center.y < pilarTop2.center.y + 45) ||
+            (bola.center.x > pilarTop3.center.x - 50) && (bola.center.x < pilarTop3.center.x  + 50) && (bola.center.y > pilarTop3.center.y - 45) && (bola.center.y < pilarTop3.center.y + 45) ||
+            (bola.center.x > pilarTop4.center.x - 50) && (bola.center.x < pilarTop4.center.x  + 50) && (bola.center.y > pilarTop4.center.y - 45) && (bola.center.y < pilarTop4.center.y + 45) ||
+            (bola.center.x > pilarTop5.center.x - 50) && (bola.center.x < pilarTop5.center.x  + 50) && (bola.center.y > pilarTop5.center.y - 45) && (bola.center.y < pilarTop5.center.y + 45) ||
+            (bola.center.x > pilarTop6.center.x - 50) && (bola.center.x < pilarTop6.center.x  + 50) && (bola.center.y > pilarTop6.center.y - 45) && (bola.center.y < pilarTop6.center.y + 45)
+        )))
+        {
+        
+        }else{
+            //vacilao perdeu na jogatina!!
+            vcPerdeu()
+        }
     }
     
     func movePilarUp(floatx: CGFloat, floaty: CGFloat, pilarNumber: Int) -> (CGPoint) {
@@ -351,7 +379,7 @@ class ViewController: UIViewController {
             switch pilarNumber{
             case 1:
                 Gameview.sendSubviewToBack(pilar1)
-                center = PilarProcess(self.pilar10.center.x, y: self.pilar10.center.y)
+                center = PilarProcess(self.pilar26.center.x, y: self.pilar26.center.y)
                 break
             case 2:
                 Gameview.sendSubviewToBack(pilar2)
@@ -391,75 +419,115 @@ class ViewController: UIViewController {
                 break
             case 11:
                 Gameview.sendSubviewToBack(pilar11)
-                center = PilarProcess(self.pilar11.center.x, y: self.pilar11.center.y)
+                center = PilarProcess(self.pilar10.center.x, y: self.pilar10.center.y)
                 break
             case 12:
                 Gameview.sendSubviewToBack(pilar12)
-                center = PilarProcess(self.pilar12.center.x, y: self.pilar12.center.y)
+                center = PilarProcess(self.pilar11.center.x, y: self.pilar11.center.y)
                 break
             case 13:
                 Gameview.sendSubviewToBack(pilar13)
-                center = PilarProcess(self.pilar13.center.x, y: self.pilar13.center.y)
+                center = PilarProcess(self.pilar12.center.x, y: self.pilar12.center.y)
                 break
             case 14:
                 Gameview.sendSubviewToBack(pilar14)
-                center = PilarProcess(self.pilar14.center.x, y: self.pilar14.center.y)
+                center = PilarProcess(self.pilar13.center.x, y: self.pilar13.center.y)
                 break
             case 15:
                 Gameview.sendSubviewToBack(pilar15)
-                center = PilarProcess(self.pilar15.center.x, y: self.pilar15.center.y)
+                center = PilarProcess(self.pilar14.center.x, y: self.pilar14.center.y)
                 break
             case 16:
                 Gameview.sendSubviewToBack(pilar16)
-                center = PilarProcess(self.pilar16.center.x, y: self.pilar16.center.y)
+                center = PilarProcess(self.pilar15.center.x, y: self.pilar15.center.y)
                 break
             case 17:
                 Gameview.sendSubviewToBack(pilar17)
-                center = PilarProcess(self.pilar17.center.x, y: self.pilar17.center.y)
+                center = PilarProcess(self.pilar16.center.x, y: self.pilar16.center.y)
                 break
             case 18:
                 Gameview.sendSubviewToBack(pilar18)
-                center = PilarProcess(self.pilar18.center.x, y: self.pilar18.center.y)
+                center = PilarProcess(self.pilar17.center.x, y: self.pilar17.center.y)
                 break
             case 19:
                 Gameview.sendSubviewToBack(pilar19)
-                center = PilarProcess(self.pilar19.center.x, y: self.pilar19.center.y)
+                center = PilarProcess(self.pilar18.center.x, y: self.pilar18.center.y)
                 break
             case 20:
                 Gameview.sendSubviewToBack(pilar20)
-                center = PilarProcess(self.pilar20.center.x, y: self.pilar20.center.y)
+                center = PilarProcess(self.pilar19.center.x, y: self.pilar19.center.y)
                 break
             case 21:
                 Gameview.sendSubviewToBack(pilar21)
-                center = PilarProcess(self.pilar21.center.x, y: self.pilar21.center.y)
+                center = PilarProcess(self.pilar20.center.x, y: self.pilar20.center.y)
                 break
             case 22:
                 Gameview.sendSubviewToBack(pilar22)
-                center = PilarProcess(self.pilar22.center.x, y: self.pilar22.center.y)
+                center = PilarProcess(self.pilar21.center.x, y: self.pilar21.center.y)
                 break
             case 23:
                 Gameview.sendSubviewToBack(pilar23)
-                center = PilarProcess(self.pilar23.center.x, y: self.pilar23.center.y)
+                center = PilarProcess(self.pilar22.center.x, y: self.pilar22.center.y)
                 break
             case 24:
                 Gameview.sendSubviewToBack(pilar24)
-                center = PilarProcess(self.pilar24.center.x, y: self.pilar24.center.y)
+                center = PilarProcess(self.pilar23.center.x, y: self.pilar23.center.y)
                 break
             case 25:
                 Gameview.sendSubviewToBack(pilar25)
-                center = PilarProcess(self.pilar25.center.x, y: self.pilar25.center.y)
+                center = PilarProcess(self.pilar24.center.x, y: self.pilar24.center.y)
                 break
             case 26:
                 Gameview.sendSubviewToBack(pilar26)
-                center = PilarProcess(self.pilar26.center.x, y: self.pilar26.center.y)
+                center = PilarProcess(self.pilar25.center.x, y: self.pilar25.center.y)
                 break
-                
             default:
                 break
                 
             }
         }
             return(center)
+    }
+    
+    
+    func vcPerdeu(){
+        tipVal = false
+        time.invalidate()
+        score.hidden = true
+        gameOver.hidden = false
+        retry.hidden = false
+        
+        
+        scoreBoarding.hidden = false
+        highScore.hidden = false
+        
+        Gameview.sendSubviewToBack(pilar1)
+        Gameview.sendSubviewToBack(pilar2)
+        Gameview.sendSubviewToBack(pilar3)
+        Gameview.sendSubviewToBack(pilar4)
+        Gameview.sendSubviewToBack(pilar5)
+        Gameview.sendSubviewToBack(pilar6)
+        Gameview.sendSubviewToBack(pilar7)
+        Gameview.sendSubviewToBack(pilar8)
+        Gameview.sendSubviewToBack(pilar9)
+        Gameview.sendSubviewToBack(pilar10)
+        Gameview.sendSubviewToBack(pilar11)
+        Gameview.sendSubviewToBack(pilar12)
+        Gameview.sendSubviewToBack(pilar13)
+        Gameview.sendSubviewToBack(pilar14)
+        Gameview.sendSubviewToBack(pilar15)
+        Gameview.sendSubviewToBack(pilar16)
+        Gameview.sendSubviewToBack(pilar17)
+        Gameview.sendSubviewToBack(pilar18)
+        Gameview.sendSubviewToBack(pilar19)
+        Gameview.sendSubviewToBack(pilar20)
+        Gameview.sendSubviewToBack(pilar21)
+        Gameview.sendSubviewToBack(pilar22)
+        Gameview.sendSubviewToBack(pilar23)
+        Gameview.sendSubviewToBack(pilar24)
+        Gameview.sendSubviewToBack(pilar25)
+        Gameview.sendSubviewToBack(pilar26)
+        
     }
     
     func checkPilarPosition(y: CGFloat) -> (Bool){
@@ -566,6 +634,24 @@ class ViewController: UIViewController {
         }
         if let newPila26Center = pilar26Center{
             self.pilar26.center = newPila26Center
+        }
+        if let newPilarTop1Center = pilarTop1Center{
+            self.pilarTop1.center = newPilarTop1Center
+        }
+        if let newPilarTop2Center = pilarTop2Center{
+            self.pilarTop2.center = newPilarTop2Center
+        }
+        if let newPilarTop3Center = pilarTop3Center{
+            self.pilarTop3.center = newPilarTop3Center
+        }
+        if let newPilarTop4Center = pilarTop4Center{
+            self.pilarTop4.center = newPilarTop4Center
+        }
+        if let newPilarTop5Center = pilarTop5Center{
+            self.pilarTop5.center = newPilarTop5Center
+        }
+        if let newPilarTop6Center = pilarTop6Center{
+            self.pilarTop6.center = newPilarTop6Center
         }
         
     }
