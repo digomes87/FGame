@@ -146,6 +146,11 @@ class ViewController: UIViewController {
     @IBOutlet var scoreNow: UILabel!
    
     var time = NSTimer()
+    var Sscore: Int = 0
+    var HhighScore: Int = 0
+    let defautls: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
+    
     var tipVal:Bool?
     var bolaR:Bool?
     var BolaC:Bool?
@@ -188,6 +193,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        HhighScore = defautls.integerForKey("highScore")
+       // Sscore = defautls.integerForKey("score")
         self.bola.hidden = true
         self.gameOver.hidden = true
         self.logo.hidden = false
@@ -231,6 +238,8 @@ class ViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
         if tipVal == true {
+            
+            Sscore++
             
             if bolaR == true {
                 
@@ -368,6 +377,42 @@ class ViewController: UIViewController {
             //vacilao perdeu na jogatina!!
             vcPerdeu()
         }
+        
+        if CGRectIntersectsRect(bola.frame, pilar1.frame){
+            
+            self.pilarTop1.center = CGPointMake(pilar26.center.x,pilar26.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar1.center.x, pilar1.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar2.center.x, pilar2.center.y - 35)
+            self.pilarTop4.center = CGPointMake(pilar23.center.x, pilar23.center.y - 35)
+            self.pilarTop5.center = CGPointMake(pilar24.center.x, pilar24.center.y - 35)
+            self.pilarTop6.center = CGPointMake(pilar25.center.x, pilar25.center.y - 35)
+            
+        }else if CGRectIntersectsRect(bola.frame, pilar2.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar3.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar4.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar5.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar6.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar7.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar8.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar9.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar10.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar11.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar12.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar13.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar14.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar15.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar16.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar17.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar18.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar19.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar20.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar21.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar22.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar23.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar24.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar25.frame){
+        }else if CGRectIntersectsRect(bola.frame, pilar26.frame){
+        }
     }
     
     func movePilarUp(floatx: CGFloat, floaty: CGFloat, pilarNumber: Int) -> (CGPoint) {
@@ -500,6 +545,15 @@ class ViewController: UIViewController {
         
         scoreBoarding.hidden = false
         highScore.hidden = false
+        
+        
+        if Sscore > HhighScore{
+            HhighScore = Sscore
+        }
+        defautls.setInteger(HhighScore, forKey: "highScore")
+        
+        self.score.text = String(Sscore)
+        self.highScore.text = String(HhighScore)
         
         Gameview.sendSubviewToBack(pilar1)
         Gameview.sendSubviewToBack(pilar2)
