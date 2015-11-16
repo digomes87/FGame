@@ -38,8 +38,27 @@ class ViewController: UIViewController {
         self.pilar8.center = PilarProcess(pilar7.center.x, y: pilar7.center.y)
         self.pilar9.center = PilarProcess(pilar8.center.x, y: pilar8.center.y)
         self.pilar10.center = PilarProcess(pilar9.center.x, y: pilar9.center.y)
+        self.pilar11.center = PilarProcess(pilar10.center.x, y: pilar10.center.y)
+        self.pilar12.center = PilarProcess(pilar11.center.x, y: pilar11.center.y)
+        self.pilar13.center = PilarProcess(pilar12.center.x, y: pilar12.center.y)
+        self.pilar14.center = PilarProcess(pilar13.center.x, y: pilar13.center.y)
+        self.pilar15.center = PilarProcess(pilar14.center.x, y: pilar14.center.y)
+        self.pilar16.center = PilarProcess(pilar15.center.x, y: pilar15.center.y)
+        self.pilar17.center = PilarProcess(pilar16.center.x, y: pilar16.center.y)
+        self.pilar18.center = PilarProcess(pilar17.center.x, y: pilar17.center.y)
+        self.pilar19.center = PilarProcess(pilar18.center.x, y: pilar18.center.y)
+        self.pilar20.center = PilarProcess(pilar19.center.x, y: pilar19.center.y)
+        self.pilar21.center = PilarProcess(pilar20.center.x, y: pilar20.center.y)
+        self.pilar22.center = PilarProcess(pilar21.center.x, y: pilar21.center.y)
+        self.pilar23.center = PilarProcess(pilar22.center.x, y: pilar22.center.y)
+        self.pilar24.center = PilarProcess(pilar23.center.x, y: pilar23.center.y)
+        self.pilar25.center = PilarProcess(pilar24.center.x, y: pilar24.center.y)
+        self.pilar26.center = PilarProcess(pilar25.center.x, y: pilar25.center.y)
         
         
+        self.pilarTop6.hidden = true
+        self.pilarTop5.hidden = true
+        self.pilarTop4.hidden = true
         self.pilarTop3.hidden = true
         self.pilarTop2.hidden = true
         self.pilarTop1.hidden = true
@@ -54,6 +73,23 @@ class ViewController: UIViewController {
         self.pilar8.hidden = false
         self.pilar9.hidden = false
         self.pilar10.hidden = false
+        self.pilar11.hidden = false
+        self.pilar12.hidden = false
+        self.pilar13.hidden = false
+        self.pilar14.hidden = false
+        self.pilar15.hidden = false
+        self.pilar16.hidden = false
+        self.pilar17.hidden = false
+        self.pilar18.hidden = false
+        self.pilar19.hidden = false
+        self.pilar20.hidden = false
+        self.pilar21.hidden = false
+        self.pilar22.hidden = false
+        self.pilar23.hidden = false
+        self.pilar24.hidden = false
+        self.pilar25.hidden = false
+        self.pilar26.hidden = false
+        
         
     }
     @IBAction func retry(sender: AnyObject){
@@ -61,6 +97,22 @@ class ViewController: UIViewController {
     }
     
     @IBOutlet var Gameview: UIView!
+    @IBOutlet var pilar26: UIImageView!
+    @IBOutlet var pilar25: UIImageView!
+    @IBOutlet var pilar24: UIImageView!
+    @IBOutlet var pilar23: UIImageView!
+    @IBOutlet var pilar22: UIImageView!
+    @IBOutlet var pilar21: UIImageView!
+    @IBOutlet var pilar20: UIImageView!
+    @IBOutlet var pilar19: UIImageView!
+    @IBOutlet var pilar18: UIImageView!
+    @IBOutlet var pilar17: UIImageView!
+    @IBOutlet var pilar16: UIImageView!
+    @IBOutlet var pilar15: UIImageView!
+    @IBOutlet var pilar14: UIImageView!
+    @IBOutlet var pilar13: UIImageView!
+    @IBOutlet var pilar12: UIImageView!
+    @IBOutlet var pilar11: UIImageView!
     @IBOutlet var pilar10: UIImageView!
     @IBOutlet var pilar9: UIImageView!
     @IBOutlet var pilar8: UIImageView!
@@ -75,11 +127,17 @@ class ViewController: UIViewController {
     @IBOutlet var pilarTop1: UIImageView!
     @IBOutlet var pilarTop2: UIImageView!
     @IBOutlet var pilarTop3: UIImageView!
+    @IBOutlet var pilarTop4: UIImageView!
+    @IBOutlet var pilarTop5: UIImageView!
+    @IBOutlet var pilarTop6: UIImageView!
     @IBOutlet var scoreBoarding: UIImageView!
     @IBOutlet var retry: UIButton!
     @IBOutlet var logo: UIImageView!
     @IBOutlet var gameOver: UIImageView!
     @IBOutlet var bola: UIImageView!
+    @IBOutlet var highScore: UILabel!
+    @IBOutlet var score: UILabel!
+    @IBOutlet var scoreNow: UILabel!
    
     var time = NSTimer()
     var tipVal:Bool?
@@ -97,10 +155,29 @@ class ViewController: UIViewController {
     var pilar8Center:CGPoint?
     var pilar9Center:CGPoint?
     var pilar10Center:CGPoint?
+    var pilar11Center:CGPoint?
+    var pilar12Center:CGPoint?
+    var pilar13Center:CGPoint?
+    var pilar14Center:CGPoint?
+    var pilar15Center:CGPoint?
+    var pilar16Center:CGPoint?
+    var pilar17Center:CGPoint?
+    var pilar18Center:CGPoint?
+    var pilar19Center:CGPoint?
+    var pilar20Center:CGPoint?
+    var pilar21Center:CGPoint?
+    var pilar22Center:CGPoint?
+    var pilar23Center:CGPoint?
+    var pilar24Center:CGPoint?
+    var pilar25Center:CGPoint?
+    var pilar26Center:CGPoint?
+    
     var pilarTop1Center:CGPoint?
     var pilarTop2Center:CGPoint?
     var pilarTop3Center:CGPoint?
-    
+    var pilarTop4Center:CGPoint?
+    var pilarTop5Center:CGPoint?
+    var pilarTop6Center:CGPoint?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,6 +187,9 @@ class ViewController: UIViewController {
         self.logo.hidden = false
         self.retry.hidden = true
         self.scoreBoarding.hidden = true
+        self.pilarTop6.hidden = true
+        self.pilarTop5.hidden = true
+        self.pilarTop4.hidden = true
         self.pilarTop3.hidden = true
         self.pilarTop2.hidden = true
         self.pilarTop1.hidden = true
@@ -124,6 +204,22 @@ class ViewController: UIViewController {
         self.pilar8.hidden = true
         self.pilar9.hidden = true
         self.pilar10.hidden = true
+        self.pilar11.hidden = true
+        self.pilar12.hidden = true
+        self.pilar13.hidden = true
+        self.pilar14.hidden = true
+        self.pilar15.hidden = true
+        self.pilar16.hidden = true
+        self.pilar17.hidden = true
+        self.pilar18.hidden = true
+        self.pilar19.hidden = true
+        self.pilar20.hidden = true
+        self.pilar21.hidden = true
+        self.pilar22.hidden = true
+        self.pilar23.hidden = true
+        self.pilar24.hidden = true
+        self.pilar25.hidden = true
+        self.pilar26.hidden = true
     }
     
     
@@ -154,7 +250,22 @@ class ViewController: UIViewController {
         pilar8Center = self.pilar8.center
         pilar9Center = self.pilar9.center
         pilar10Center = self.pilar10.center
-        
+        pilar11Center = self.pilar11.center
+        pilar12Center = self.pilar12.center
+        pilar13Center = self.pilar13.center
+        pilar14Center = self.pilar14.center
+        pilar15Center = self.pilar15.center
+        pilar16Center = self.pilar16.center
+        pilar17Center = self.pilar17.center
+        pilar18Center = self.pilar18.center
+        pilar19Center = self.pilar19.center
+        pilar20Center = self.pilar20.center
+        pilar21Center = self.pilar21.center
+        pilar22Center = self.pilar22.center
+        pilar23Center = self.pilar23.center
+        pilar24Center = self.pilar24.center
+        pilar25Center = self.pilar25.center
+        pilar26Center = self.pilar26.center
         
         
         if BolaC == false {
@@ -186,6 +297,22 @@ class ViewController: UIViewController {
         pilar8.center.y += 5
         pilar9.center.y += 5
         pilar10.center.y += 5
+        pilar11.center.y += 5
+        pilar12.center.y += 5
+        pilar13.center.y += 5
+        pilar14.center.y += 5
+        pilar15.center.y += 5
+        pilar16.center.y += 5
+        pilar17.center.y += 5
+        pilar18.center.y += 5
+        pilar19.center.y += 5
+        pilar20.center.y += 5
+        pilar21.center.y += 5
+        pilar22.center.y += 5
+        pilar23.center.y += 5
+        pilar24.center.y += 5
+        pilar25.center.y += 5
+        pilar26.center.y += 5
         
         pilar1.center = movePilarUp(pilar1.center.x, floaty: pilar1.center.y, pilarNumber: 1)
         pilar2.center = movePilarUp(pilar2.center.x, floaty: pilar2.center.y, pilarNumber: 2)
@@ -197,6 +324,22 @@ class ViewController: UIViewController {
         pilar8.center = movePilarUp(pilar8.center.x, floaty: pilar8.center.y, pilarNumber: 8)
         pilar9.center = movePilarUp(pilar9.center.x, floaty: pilar9.center.y, pilarNumber: 9)
         pilar10.center = movePilarUp(pilar10.center.x, floaty: pilar10.center.y, pilarNumber: 10)
+        pilar11.center = movePilarUp(pilar11.center.x, floaty: pilar11.center.y, pilarNumber: 11)
+        pilar12.center = movePilarUp(pilar12.center.x, floaty: pilar12.center.y, pilarNumber: 12)
+        pilar13.center = movePilarUp(pilar13.center.x, floaty: pilar13.center.y, pilarNumber: 13)
+        pilar14.center = movePilarUp(pilar14.center.x, floaty: pilar14.center.y, pilarNumber: 14)
+        pilar15.center = movePilarUp(pilar15.center.x, floaty: pilar15.center.y, pilarNumber: 15)
+        pilar16.center = movePilarUp(pilar16.center.x, floaty: pilar16.center.y, pilarNumber: 16)
+        pilar17.center = movePilarUp(pilar17.center.x, floaty: pilar17.center.y, pilarNumber: 17)
+        pilar18.center = movePilarUp(pilar18.center.x, floaty: pilar18.center.y, pilarNumber: 18)
+        pilar19.center = movePilarUp(pilar19.center.x, floaty: pilar19.center.y, pilarNumber: 19)
+        pilar20.center = movePilarUp(pilar20.center.x, floaty: pilar20.center.y, pilarNumber: 20)
+        pilar21.center = movePilarUp(pilar21.center.x, floaty: pilar21.center.y, pilarNumber: 21)
+        pilar22.center = movePilarUp(pilar22.center.x, floaty: pilar22.center.y, pilarNumber: 22)
+        pilar23.center = movePilarUp(pilar23.center.x, floaty: pilar23.center.y, pilarNumber: 23)
+        pilar24.center = movePilarUp(pilar24.center.x, floaty: pilar24.center.y, pilarNumber: 24)
+        pilar25.center = movePilarUp(pilar25.center.x, floaty: pilar25.center.y, pilarNumber: 25)
+        pilar26.center = movePilarUp(pilar26.center.x, floaty: pilar26.center.y, pilarNumber: 26)
     }
     
     func movePilarUp(floatx: CGFloat, floaty: CGFloat, pilarNumber: Int) -> (CGPoint) {
@@ -246,6 +389,71 @@ class ViewController: UIViewController {
                 Gameview.sendSubviewToBack(pilar10)
                 center = PilarProcess(self.pilar9.center.x, y: self.pilar9.center.y)
                 break
+            case 11:
+                Gameview.sendSubviewToBack(pilar11)
+                center = PilarProcess(self.pilar11.center.x, y: self.pilar11.center.y)
+                break
+            case 12:
+                Gameview.sendSubviewToBack(pilar12)
+                center = PilarProcess(self.pilar12.center.x, y: self.pilar12.center.y)
+                break
+            case 13:
+                Gameview.sendSubviewToBack(pilar13)
+                center = PilarProcess(self.pilar13.center.x, y: self.pilar13.center.y)
+                break
+            case 14:
+                Gameview.sendSubviewToBack(pilar14)
+                center = PilarProcess(self.pilar14.center.x, y: self.pilar14.center.y)
+                break
+            case 15:
+                Gameview.sendSubviewToBack(pilar15)
+                center = PilarProcess(self.pilar15.center.x, y: self.pilar15.center.y)
+                break
+            case 16:
+                Gameview.sendSubviewToBack(pilar16)
+                center = PilarProcess(self.pilar16.center.x, y: self.pilar16.center.y)
+                break
+            case 17:
+                Gameview.sendSubviewToBack(pilar17)
+                center = PilarProcess(self.pilar17.center.x, y: self.pilar17.center.y)
+                break
+            case 18:
+                Gameview.sendSubviewToBack(pilar18)
+                center = PilarProcess(self.pilar18.center.x, y: self.pilar18.center.y)
+                break
+            case 19:
+                Gameview.sendSubviewToBack(pilar19)
+                center = PilarProcess(self.pilar19.center.x, y: self.pilar19.center.y)
+                break
+            case 20:
+                Gameview.sendSubviewToBack(pilar20)
+                center = PilarProcess(self.pilar20.center.x, y: self.pilar20.center.y)
+                break
+            case 21:
+                Gameview.sendSubviewToBack(pilar21)
+                center = PilarProcess(self.pilar21.center.x, y: self.pilar21.center.y)
+                break
+            case 22:
+                Gameview.sendSubviewToBack(pilar22)
+                center = PilarProcess(self.pilar22.center.x, y: self.pilar22.center.y)
+                break
+            case 23:
+                Gameview.sendSubviewToBack(pilar23)
+                center = PilarProcess(self.pilar23.center.x, y: self.pilar23.center.y)
+                break
+            case 24:
+                Gameview.sendSubviewToBack(pilar24)
+                center = PilarProcess(self.pilar24.center.x, y: self.pilar24.center.y)
+                break
+            case 25:
+                Gameview.sendSubviewToBack(pilar25)
+                center = PilarProcess(self.pilar25.center.x, y: self.pilar25.center.y)
+                break
+            case 26:
+                Gameview.sendSubviewToBack(pilar26)
+                center = PilarProcess(self.pilar26.center.x, y: self.pilar26.center.y)
+                break
+                
             default:
                 break
                 
@@ -310,6 +518,56 @@ class ViewController: UIViewController {
         if let newPila10Center = pilar10Center{
             self.pilar10.center = newPila10Center
         }
+        
+        if let newPila11Center = pilar11Center{
+            self.pilar11.center = newPila11Center
+        }
+        if let newPila12Center = pilar12Center{
+            self.pilar12.center = newPila12Center
+        }
+        if let newPila13Center = pilar13Center{
+            self.pilar13.center = newPila13Center
+        }
+        if let newPila14Center = pilar14Center{
+            self.pilar14.center = newPila14Center
+        }
+        if let newPila15Center = pilar15Center{
+            self.pilar15.center = newPila15Center
+        }
+        if let newPila16Center = pilar16Center{
+            self.pilar16.center = newPila16Center
+        }
+        if let newPila17Center = pilar17Center{
+            self.pilar17.center = newPila17Center
+        }
+        if let newPila18Center = pilar18Center{
+            self.pilar18.center = newPila18Center
+        }
+        if let newPila19Center = pilar19Center{
+            self.pilar19.center = newPila19Center
+        }
+        if let newPila20Center = pilar20Center{
+            self.pilar20.center = newPila20Center
+        }
+        if let newPila21Center = pilar21Center{
+            self.pilar21.center = newPila21Center
+        }
+        if let newPila22Center = pilar22Center{
+            self.pilar22.center = newPila22Center
+        }
+        if let newPila23Center = pilar23Center{
+            self.pilar23.center = newPila23Center
+        }
+        if let newPila24Center = pilar24Center{
+            self.pilar24.center = newPila24Center
+        }
+        if let newPila25Center = pilar25Center{
+            self.pilar25.center = newPila25Center
+        }
+        if let newPila26Center = pilar26Center{
+            self.pilar26.center = newPila26Center
+        }
+        
     }
     
     func PilarProcess(x:CGFloat ,y:CGFloat) -> (CGPoint){
