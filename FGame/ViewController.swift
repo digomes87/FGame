@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    //TENHO QUE CORRIGIR A CONTAGEM DE PONTOS NO SCORE
     
     @IBAction func play(sender: AnyObject) {
         BolaC=true
