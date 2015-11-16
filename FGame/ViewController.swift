@@ -383,35 +383,118 @@ class ViewController: UIViewController {
             self.pilarTop1.center = CGPointMake(pilar26.center.x,pilar26.center.y - 35)
             self.pilarTop2.center = CGPointMake(pilar1.center.x, pilar1.center.y - 35)
             self.pilarTop3.center = CGPointMake(pilar2.center.x, pilar2.center.y - 35)
-            self.pilarTop4.center = CGPointMake(pilar23.center.x, pilar23.center.y - 35)
+            self.pilarTop4.center = CGPointMake(pilar25.center.x, pilar25.center.y - 35)
             self.pilarTop5.center = CGPointMake(pilar24.center.x, pilar24.center.y - 35)
-            self.pilarTop6.center = CGPointMake(pilar25.center.x, pilar25.center.y - 35)
-            
+            self.pilarTop6.center = CGPointMake(pilar23.center.x, pilar23.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar2.frame){
+            
+            self.pilarTop1.center = CGPointMake(pilar3.center.x,pilar3.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar4.center.x, pilar4.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar5.center.x, pilar5.center.y - 35)
+            self.pilarTop4.center = CGPointMake(pilar26.center.x, pilar26.center.y - 35)
+            self.pilarTop5.center = CGPointMake(pilar25.center.x, pilar25.center.y - 35)
+            self.pilarTop6.center = CGPointMake(pilar24.center.x, pilar24.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar3.frame){
+            
+            self.pilarTop4.hidden = true
+            self.pilarTop5.hidden = true
+            self.pilarTop6.hidden = true
+            self.pilarTop1.center = CGPointMake(pilar4.center.x,pilar4.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar5.center.x, pilar5.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar6.center.x, pilar6.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar4.frame){
+            
+            self.pilarTop1.center = CGPointMake(pilar5.center.x,pilar5.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar6.center.x, pilar6.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar7.center.x, pilar7.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar5.frame){
+            self.pilarTop1.center = CGPointMake(pilar6.center.x,pilar6.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar7.center.x, pilar7.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar8.center.x, pilar8.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar6.frame){
+            self.pilarTop1.center = CGPointMake(pilar7.center.x,pilar7.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar8.center.x, pilar8.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar9.center.x, pilar9.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar7.frame){
+            self.pilarTop1.center = CGPointMake(pilar8.center.x,pilar8.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar9.center.x, pilar9.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar10.center.x, pilar10.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar8.frame){
+            self.pilarTop1.center = CGPointMake(pilar9.center.x,pilar9.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar10.center.x, pilar10.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar11.center.x, pilar11.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar9.frame){
+            self.pilarTop1.center = CGPointMake(pilar10.center.x,pilar10.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar11.center.x, pilar11.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar12.center.x, pilar12.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar10.frame){
+            self.pilarTop1.center = CGPointMake(pilar11.center.x,pilar11.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar12.center.x, pilar12.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar13.center.x, pilar13.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar11.frame){
+            self.pilarTop1.center = CGPointMake(pilar12.center.x,pilar12.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar13.center.x, pilar13.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar14.center.x, pilar14.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar12.frame){
+            self.pilarTop1.center = CGPointMake(pilar13.center.x,pilar13.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar14.center.x, pilar14.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar15.center.x, pilar15.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar13.frame){
+            self.pilarTop1.center = CGPointMake(pilar14.center.x,pilar14.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar15.center.x, pilar15.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar16.center.x, pilar16.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar14.frame){
+            self.pilarTop1.center = CGPointMake(pilar15.center.x,pilar15.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar16.center.x, pilar16.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar17.center.x, pilar17.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar15.frame){
+            self.pilarTop1.center = CGPointMake(pilar16.center.x,pilar16.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar17.center.x, pilar17.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar18.center.x, pilar18.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar16.frame){
+            self.pilarTop1.center = CGPointMake(pilar17.center.x,pilar17.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar18.center.x, pilar18.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar19.center.x, pilar19.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar17.frame){
+            self.pilarTop1.center = CGPointMake(pilar18.center.x,pilar18.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar19.center.x, pilar19.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar20.center.x, pilar20.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar18.frame){
+            self.pilarTop1.center = CGPointMake(pilar19.center.x,pilar19.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar20.center.x, pilar20.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar21.center.x, pilar21.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar19.frame){
+            self.pilarTop1.center = CGPointMake(pilar20.center.x,pilar20.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar21.center.x, pilar21.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar22.center.x, pilar22.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar20.frame){
+            self.pilarTop1.center = CGPointMake(pilar21.center.x,pilar21.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar22.center.x, pilar22.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar23.center.x, pilar23.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar21.frame){
+            self.pilarTop1.center = CGPointMake(pilar22.center.x,pilar22.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar23.center.x, pilar23.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar24.center.x, pilar24.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar22.frame){
+            self.pilarTop1.center = CGPointMake(pilar23.center.x,pilar23.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar24.center.x, pilar24.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar25.center.x, pilar25.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar23.frame){
+            self.pilarTop1.center = CGPointMake(pilar24.center.x,pilar4.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar25.center.x, pilar5.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar26.center.x, pilar6.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar24.frame){
+            self.pilarTop1.center = CGPointMake(pilar24.center.x,pilar24.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar25.center.x, pilar25.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar26.center.x, pilar26.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar25.frame){
+            self.pilarTop1.center = CGPointMake(pilar24.center.x,pilar24.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar25.center.x, pilar25.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar26.center.x, pilar26.center.y - 35)
         }else if CGRectIntersectsRect(bola.frame, pilar26.frame){
+            self.pilarTop1.center = CGPointMake(pilar24.center.x,pilar24.center.y - 35)
+            self.pilarTop2.center = CGPointMake(pilar25.center.x, pilar25.center.y - 35)
+            self.pilarTop3.center = CGPointMake(pilar26.center.x, pilar26.center.y - 35)
         }
     }
     
