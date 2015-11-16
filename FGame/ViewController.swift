@@ -86,6 +86,22 @@ class ViewController: UIViewController {
     var bolaR:Bool?
     var BolaC:Bool?
     
+    var bolaCenter:CGPoint?
+    var pilar1Center:CGPoint?
+    var pilar2Center:CGPoint?
+    var pilar3Center:CGPoint?
+    var pilar4Center:CGPoint?
+    var pilar5Center:CGPoint?
+    var pilar6Center:CGPoint?
+    var pilar7Center:CGPoint?
+    var pilar8Center:CGPoint?
+    var pilar9Center:CGPoint?
+    var pilar10Center:CGPoint?
+    var pilarTop1Center:CGPoint?
+    var pilarTop2Center:CGPoint?
+    var pilarTop3Center:CGPoint?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -126,6 +142,20 @@ class ViewController: UIViewController {
     }
     
     func move(){
+        
+        bolaCenter = self.bola.center
+        pilar1Center = self.pilar1.center
+        pilar2Center = self.pilar2.center
+        pilar3Center = self.pilar3.center
+        pilar4Center = self.pilar4.center
+        pilar5Center = self.pilar5.center
+        pilar6Center = self.pilar6.center
+        pilar7Center = self.pilar7.center
+        pilar8Center = self.pilar8.center
+        pilar9Center = self.pilar9.center
+        pilar10Center = self.pilar10.center
+        
+        
         
         if BolaC == false {
             
@@ -233,6 +263,53 @@ class ViewController: UIViewController {
         }
         
         return(low)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        if let newBallCenter = bolaCenter{
+            self.bola.center = newBallCenter
+        }
+        
+        if let newPila1Center = pilar1Center{
+            self.pilar1.center = newPila1Center
+        }
+        
+        if let newPila2Center = pilar2Center{
+            self.pilar2.center = newPila2Center
+        }
+        
+        if let newPila3Center = pilar3Center{
+            self.pilar3.center = newPila3Center
+        }
+        
+        if let newPila4Center = pilar4Center{
+            self.pilar4.center = newPila4Center
+        }
+        
+        if let newPila5Center = pilar5Center{
+            self.pilar5.center = newPila5Center
+        }
+        
+        if let newPila6Center = pilar6Center{
+            self.pilar6.center = newPila6Center
+        }
+        
+        if let newPila7Center = pilar7Center{
+            self.pilar7.center = newPila7Center
+        }
+        
+        if let newPila8Center = pilar8Center{
+            self.pilar8.center = newPila8Center
+        }
+        
+        if let newPila9Center = pilar9Center{
+            self.pilar9.center = newPila9Center
+        }
+        
+        if let newPila10Center = pilar10Center{
+            self.pilar10.center = newPila10Center
+        }
     }
     
     func PilarProcess(x:CGFloat ,y:CGFloat) -> (CGPoint){
