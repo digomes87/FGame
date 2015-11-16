@@ -60,6 +60,7 @@ class ViewController: UIViewController {
         
     }
     
+    @IBOutlet var Gameview: UIView!
     @IBOutlet var pilar10: UIImageView!
     @IBOutlet var pilar9: UIImageView!
     @IBOutlet var pilar8: UIImageView!
@@ -155,9 +156,84 @@ class ViewController: UIViewController {
         pilar8.center.y += 5
         pilar9.center.y += 5
         pilar10.center.y += 5
+        
+        pilar1.center = movePilarUp(pilar1.center.x, floaty: pilar1.center.y, pilarNumber: 1)
+        pilar2.center = movePilarUp(pilar2.center.x, floaty: pilar2.center.y, pilarNumber: 2)
+        pilar3.center = movePilarUp(pilar3.center.x, floaty: pilar3.center.y, pilarNumber: 3)
+        pilar4.center = movePilarUp(pilar4.center.x, floaty: pilar4.center.y, pilarNumber: 4)
+        pilar5.center = movePilarUp(pilar5.center.x, floaty: pilar5.center.y, pilarNumber: 5)
+        pilar6.center = movePilarUp(pilar6.center.x, floaty: pilar6.center.y, pilarNumber: 6)
+        pilar7.center = movePilarUp(pilar7.center.x, floaty: pilar7.center.y, pilarNumber: 7)
+        pilar8.center = movePilarUp(pilar8.center.x, floaty: pilar8.center.y, pilarNumber: 8)
+        pilar9.center = movePilarUp(pilar9.center.x, floaty: pilar9.center.y, pilarNumber: 9)
+        pilar10.center = movePilarUp(pilar10.center.x, floaty: pilar10.center.y, pilarNumber: 10)
     }
     
+    func movePilarUp(floatx: CGFloat, floaty: CGFloat, pilarNumber: Int) -> (CGPoint) {
+        
+        var center = CGPointMake(floatx, floaty)
+        
+        if checkPilarPosition(floaty) == true {
+            
+            switch pilarNumber{
+            case 1:
+                Gameview.sendSubviewToBack(pilar1)
+                center = PilarProcess(self.pilar10.center.x, y: self.pilar10.center.y)
+                break
+            case 2:
+                Gameview.sendSubviewToBack(pilar2)
+                center = PilarProcess(self.pilar1.center.x, y: self.pilar1.center.y)
+                break
+            case 3:
+                Gameview.sendSubviewToBack(pilar3)
+                center = PilarProcess(self.pilar2.center.x, y: self.pilar2.center.y)
+                break
+            case 4:
+                Gameview.sendSubviewToBack(pilar4)
+                center = PilarProcess(self.pilar3.center.x, y: self.pilar3.center.y)
+                break
+            case 5:
+                Gameview.sendSubviewToBack(pilar5)
+                center = PilarProcess(self.pilar4.center.x, y: self.pilar4.center.y)
+                break
+            case 6:
+                Gameview.sendSubviewToBack(pilar6)
+                center = PilarProcess(self.pilar5.center.x, y: self.pilar5.center.y)
+                break
+            case 7:
+                Gameview.sendSubviewToBack(pilar7)
+                center = PilarProcess(self.pilar6.center.x, y: self.pilar6.center.y)
+                break
+            case 8:
+                Gameview.sendSubviewToBack(pilar8)
+                center = PilarProcess(self.pilar7.center.x, y: self.pilar7.center.y)
+                break
+            case 9:
+                Gameview.sendSubviewToBack(pilar9)
+                center = PilarProcess(self.pilar8.center.x, y: self.pilar8.center.y)
+                break
+            case 10:
+                Gameview.sendSubviewToBack(pilar10)
+                center = PilarProcess(self.pilar9.center.x, y: self.pilar9.center.y)
+                break
+            default:
+                break
+                
+            }
+        }
+            return(center)
+    }
     
+    func checkPilarPosition(y: CGFloat) -> (Bool){
+        
+        var low:Bool = false
+        
+        if (y > 720){
+            low = true
+        }
+        
+        return(low)
+    }
     
     func PilarProcess(x:CGFloat ,y:CGFloat) -> (CGPoint){
         

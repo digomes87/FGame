@@ -276,6 +276,7 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="Gameview" destination="8bC-Xf-vdC" id="I5S-NT-hKR"/>
                         <outlet property="bola" destination="Jn0-tF-KR4" id="R9d-Vj-CIb"/>
                         <outlet property="gameOver" destination="3kf-i4-H1x" id="flg-jq-WiN"/>
                         <outlet property="logo" destination="prn-0B-7Jc" id="0Ny-k9-pF1"/>
