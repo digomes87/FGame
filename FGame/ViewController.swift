@@ -16,19 +16,18 @@ class ViewController: UIViewController {
     
     @IBAction func play(sender: AnyObject) {
         
-        self.gameOver.hidden = true
+      /*  self.gameOver.hidden = true
         self.retr.hidden = true
         self.bola.hidden = false
-        self.twitter.hidden = true
         self.scoreBoard.hidden = true
         self.playBt.hidden = true
         
         //posicao da bola
-        self.bola.center.x = 123.7
-        self.bola.center.y = 200.0
+        self.bola.center.x = 180.0
+        self.bola.center.y = 350.0
         
         
-        self.coluna1.center = CGPointMake(375.0, 436.0)
+        self.coluna1.center = CGPointMake(185.0, 456.0)
         self.coluna2.center = CGPointMake(114.0, 407.0)
         
         self.coluna3.center = caminhoProcess(coluna2.center.x, y: coluna2.center.y)
@@ -58,7 +57,7 @@ class ViewController: UIViewController {
         
         self.caminho.hidden = false
         self.caminho2.hidden = false
-        self.caminho3.hidden = false
+        self.caminho3.hidden = false*/
         
     }
     
@@ -81,7 +80,6 @@ class ViewController: UIViewController {
     @IBOutlet var gameOver: UIImageView!
     @IBOutlet var score: UIImageView!
     @IBOutlet var retr: UIImageView!
-    @IBOutlet var twitter: UIImageView!
     @IBOutlet var bola: UIImageView!
    
     override func viewDidLoad() {
@@ -90,10 +88,9 @@ class ViewController: UIViewController {
         self.gameOver.hidden = true
         self.retr.hidden = true
         self.bola.hidden = true
-        self.twitter.hidden = true
         self.scoreBoard.hidden = true
         
-        self.coluna1.hidden = true
+        /*self.coluna1.hidden = true
         self.coluna2.hidden = true
         self.coluna3.hidden = true
         self.coluna4.hidden = true
@@ -106,7 +103,7 @@ class ViewController: UIViewController {
         
         self.caminho.hidden = true
         self.caminho2.hidden = true
-        self.caminho3.hidden = true
+        self.caminho3.hidden = true*/
         
         
     }
