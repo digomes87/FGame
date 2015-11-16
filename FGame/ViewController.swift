@@ -12,12 +12,14 @@ class ViewController: UIViewController {
 
     
     @IBAction func play(sender: AnyObject) {
-        
+        BolaC=true
+        tipVal=true
         self.bola.hidden = false
         self.gameOver.hidden = true
         self.logo.hidden = true
         self.retry.hidden = true
         self.scoreBoarding.hidden = true
+        self.play.hidden = true
         
         
         self.bola.center.x = 178.0
@@ -26,13 +28,21 @@ class ViewController: UIViewController {
         self.pilar1.center = CGPointMake(175.0, 436.0)
         self.pilar2.center = CGPointMake(214.0, 407.0)
         
+        time = NSTimer.scheduledTimerWithTimeInterval(0.045, target: self, selector: "move", userInfo: nil, repeats: true)
+        
         self.pilar3.center = PilarProcess(pilar2.center.x, y: pilar2.center.y)
+        self.pilar4.center = PilarProcess(pilar3.center.x, y: pilar3.center.y)
+        self.pilar5.center = PilarProcess(pilar4.center.x, y: pilar4.center.y)
+        self.pilar6.center = PilarProcess(pilar5.center.x, y: pilar5.center.y)
+        self.pilar7.center = PilarProcess(pilar6.center.x, y: pilar6.center.y)
+        self.pilar8.center = PilarProcess(pilar7.center.x, y: pilar7.center.y)
+        self.pilar9.center = PilarProcess(pilar8.center.x, y: pilar8.center.y)
+        self.pilar10.center = PilarProcess(pilar9.center.x, y: pilar9.center.y)
         
         
-        
-        self.pilarTop3.hidden = false
-        self.pilarTop2.hidden = false
-        self.pilarTop1.hidden = false
+        self.pilarTop3.hidden = true
+        self.pilarTop2.hidden = true
+        self.pilarTop1.hidden = true
         
         self.pilar1.hidden = false
         self.pilar2.hidden = false
@@ -70,6 +80,10 @@ class ViewController: UIViewController {
     @IBOutlet var gameOver: UIImageView!
     @IBOutlet var bola: UIImageView!
    
+    var time = NSTimer()
+    var tipVal:Bool?
+    var bolaR:Bool?
+    var BolaC:Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -95,6 +109,56 @@ class ViewController: UIViewController {
         self.pilar10.hidden = true
     }
     
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        
+        if tipVal == true {
+            
+            if bolaR == true {
+                
+                BolaC = false
+            }else {
+            
+                BolaC = true
+            }
+        }
+    }
+    
+    func move(){
+        
+        if BolaC == false {
+            
+            bolaR = false
+        }else {
+            
+            bolaR = true
+        }
+        
+        if bolaR == true {
+            
+            bola.center.x += 6.5
+            bola.center.y -= 0.5
+        }else{
+            
+            bola.center.x -= 6.5
+            bola.center.y -= 0.5
+        }
+        
+        bola.center.y += 0.5
+        pilar1.center.y += 5
+        pilar2.center.y += 5
+        pilar3.center.y += 5
+        pilar4.center.y += 5
+        pilar5.center.y += 5
+        pilar6.center.y += 5
+        pilar7.center.y += 5
+        pilar8.center.y += 5
+        pilar9.center.y += 5
+        pilar10.center.y += 5
+    }
+    
+    
+    
     func PilarProcess(x:CGFloat ,y:CGFloat) -> (CGPoint){
         
         var PilarNewX: CGFloat
@@ -107,10 +171,22 @@ class ViewController: UIViewController {
             PilarNewX = x + 39
             PilarNewY = y - 29
             
+            if PilarNewX >= 319 {
+                
+                PilarNewX = x - 40
+                PilarNewY = y - 30
+            }
+            
         }else{
             
             PilarNewX = x - 40
             PilarNewY = y - 30
+            
+            if PilarNewX <= 17 {
+                
+                PilarNewX = x + 39
+                PilarNewY = y - 29
+            }
         
         }
         

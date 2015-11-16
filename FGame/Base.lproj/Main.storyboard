@@ -18,6 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="gameOver" translatesAutoresizingMaskIntoConstraints="NO" id="3kf-i4-H1x">
+                                <rect key="frame" x="178" y="0.0" width="245" height="55"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="245" id="iaJ-Id-Xv5"/>
+                                    <constraint firstAttribute="height" constant="55" id="kjm-C8-QIa"/>
+                                    <constraint firstAttribute="height" constant="98" id="qAJ-O2-Cx0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="qAJ-O2-Cx0"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="3Ih-GE-Abc">
                                 <rect key="frame" x="263" y="28" width="348" height="186"/>
                                 <animations/>
@@ -35,30 +49,6 @@
                                         <exclude reference="33p-g8-Qb3"/>
                                         <exclude reference="kMH-g0-7da"/>
                                         <exclude reference="luH-lY-SoN"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminhotop" translatesAutoresizingMaskIntoConstraints="NO" id="jTt-kz-F1e">
-                                <rect key="frame" x="11" y="242" width="91" height="65"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="WiR-zR-Dwg"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="WiR-zR-Dwg"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminhotop" translatesAutoresizingMaskIntoConstraints="NO" id="d7i-fL-2Ma">
-                                <rect key="frame" x="11" y="161" width="91" height="65"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="92" id="eZh-w6-gSj"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="eZh-w6-gSj"/>
                                     </mask>
                                 </variation>
                             </imageView>
@@ -89,6 +79,30 @@
                                     <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="keW-on-boF"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminhotop" translatesAutoresizingMaskIntoConstraints="NO" id="jTt-kz-F1e">
+                                <rect key="frame" x="11" y="242" width="91" height="65"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="WiR-zR-Dwg"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="WiR-zR-Dwg"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminhotop" translatesAutoresizingMaskIntoConstraints="NO" id="d7i-fL-2Ma">
+                                <rect key="frame" x="11" y="161" width="91" height="65"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="92" id="eZh-w6-gSj"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="eZh-w6-gSj"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminhotop" translatesAutoresizingMaskIntoConstraints="NO" id="ccD-ub-u0V">
                                 <rect key="frame" x="6" y="88" width="91" height="65"/>
                                 <animations/>
@@ -100,60 +114,6 @@
                                         <exclude reference="Hme-Lw-zUp"/>
                                     </mask>
                                 </variation>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="Jfz-GQ-zxY">
-                                <rect key="frame" x="391" y="303" width="79" height="142"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="6u9-Gb-Zvk"/>
-                                    <constraint firstAttribute="height" constant="142" id="tbk-Rz-h2f"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="2Yz-8b-lXa">
-                                <rect key="frame" x="236" y="303" width="79" height="142"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="OiI-0h-9Jk"/>
-                                    <constraint firstAttribute="height" constant="142" id="sX2-PP-sjD"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="Rng-ux-zyO">
-                                <rect key="frame" x="314" y="303" width="79" height="142"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="hiW-rL-Q6G"/>
-                                    <constraint firstAttribute="height" constant="142" id="kgZ-KN-27j"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="gameOver" translatesAutoresizingMaskIntoConstraints="NO" id="3kf-i4-H1x">
-                                <rect key="frame" x="178" y="0.0" width="245" height="55"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="245" id="iaJ-Id-Xv5"/>
-                                    <constraint firstAttribute="height" constant="55" id="kjm-C8-QIa"/>
-                                    <constraint firstAttribute="height" constant="98" id="qAJ-O2-Cx0"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="qAJ-O2-Cx0"/>
-                                    </mask>
-                                </variation>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="aay-ke-jLG">
-                                <rect key="frame" x="157" y="303" width="79" height="142"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="142" id="alx-Y1-Dfo"/>
-                                    <constraint firstAttribute="width" constant="79" id="qBT-II-Sa2"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="xmd-Rs-Ueh">
-                                <rect key="frame" x="79" y="303" width="79" height="142"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="142" id="Boq-q8-U7U"/>
-                                    <constraint firstAttribute="width" constant="79" id="V1O-C5-79g"/>
-                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="GmR-uz-ziD">
                                 <rect key="frame" x="391" y="450" width="79" height="142"/>
@@ -193,6 +153,46 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="79" id="0Cq-0q-3Gc"/>
                                     <constraint firstAttribute="height" constant="142" id="nwr-vK-LNY"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="Jfz-GQ-zxY">
+                                <rect key="frame" x="391" y="303" width="79" height="142"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="6u9-Gb-Zvk"/>
+                                    <constraint firstAttribute="height" constant="142" id="tbk-Rz-h2f"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="Rng-ux-zyO">
+                                <rect key="frame" x="314" y="303" width="79" height="142"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="hiW-rL-Q6G"/>
+                                    <constraint firstAttribute="height" constant="142" id="kgZ-KN-27j"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="2Yz-8b-lXa">
+                                <rect key="frame" x="236" y="303" width="79" height="142"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="OiI-0h-9Jk"/>
+                                    <constraint firstAttribute="height" constant="142" id="sX2-PP-sjD"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="aay-ke-jLG">
+                                <rect key="frame" x="157" y="303" width="79" height="142"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="alx-Y1-Dfo"/>
+                                    <constraint firstAttribute="width" constant="79" id="qBT-II-Sa2"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="caminho" translatesAutoresizingMaskIntoConstraints="NO" id="xmd-Rs-Ueh">
+                                <rect key="frame" x="79" y="303" width="79" height="142"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="Boq-q8-U7U"/>
+                                    <constraint firstAttribute="width" constant="79" id="V1O-C5-79g"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="bola" translatesAutoresizingMaskIntoConstraints="NO" id="Jn0-tF-KR4">
