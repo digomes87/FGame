@@ -12,7 +12,7 @@ class ViewController: UIViewController {
 
     
     @IBAction func play(sender: AnyObject) {
-        
+    
         self.bola.hidden = false
         self.gameOver.hidden = true
         self.logo.hidden = true
